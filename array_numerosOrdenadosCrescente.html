@@ -1,0 +1,35 @@
+<meta charset="UTF-8">
+
+<script>
+
+var vetor = [Math.round(Math.random()*100), Math.round(Math.random()*100), Math.round(Math.random()*100), Math.round(Math.random()*100), Math.round(Math.random()*100), Math.round(Math.random()*100)];
+var aux = 0;
+var aux2 = vetor[0];
+
+document.write("Array Desordenada: " + vetor + "<br>" + "<hr>");
+
+	for(var i=0; i < vetor.length; i++){
+	   for (var j=0; j < vetor.length; j++){
+		if(vetor[i]<vetor[j]){
+		   aux=vetor[i];
+		   vetor[i]=vetor[j];
+		   vetor[j]=aux;
+		}
+	   }
+	  }
+
+document.write("Array Ordenada - Crescente: " + vetor + "<br>" + "<hr>");
+
+for(var i=0; i < vetor.length; i++){
+	   for (var j=0; j < vetor.length; j++){
+		if(vetor[i]>vetor[j]){
+		   aux2=vetor[i];
+		   vetor[i]=vetor[j];
+		   vetor[j]=aux2;
+		}
+	   }
+	  }
+
+document.write("Array Ordenada - Decrescente: " + vetor + "<br>" + "<hr>");
+  	
+</script>
